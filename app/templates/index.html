@@ -2,9 +2,12 @@
 {% block content %}
 
   
-    <h1>Detect type of pastry with Deep Learning</h1>
-    <h2>Try to analyze an Image of a pastry</h2>
-    <small>Just click on select and select an image of a pastry. Click on Analyze.</small>
+    <h1>Klassifiziere dein Gebäck</h1>
+    <p>
+      Das gewählte DatenSet besteht aus den Kategorien Brezel, Kornspitz, Mohnflesser und Semmel. Zum Trainieren des Learners wurden rund 430 Bilder der Gebäcksorten verwendet.
+    </p>
+    <h2>Versuche ein Bild eines Gebäcks zu analysieren</h2>
+    <small>Wählen sie ein Bild aus und klicken Sie auf "Analysieren"!</small>
 
       <div class='no-display'>
         <input id='file-input'
@@ -16,13 +19,13 @@
       </div>
       
       <div class='upload-label'>
-        <label id='upload-label' class="label label-primary">No file chosen</label>
+        <label id='upload-label' class="label label-primary">Keine Datei ausgewählt</label>
       </div>
       <div>
         <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
       </div>
       <div class='analyze'>
-        <button id='analyze-button' class='btn btn-primary' type='button' onclick='analyze()'>Analyze</button>
+        <button id='analyze-button' class='btn btn-primary' type='button' onclick='analyze()'>Analysieren</button>
       </div>
       
       <div id="results" style="display: none;">
@@ -34,8 +37,8 @@
             </colgroup>
             <thead>
               <tr>
-                <th><span class="text-center">Label</span></th>
-                <th><span class="text-center">Prediction</span></th>
+                <th><span class="text-center">Gebäcksorte</span></th>
+                <th><span class="text-center">Wahrscheinlichkeit</span></th>
               </tr>
             </thead>
             <tbody>
